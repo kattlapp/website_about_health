@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+require __DIR__ . '/auth.php';
+$login = getUserLogin();
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +10,20 @@
     <title>Спорт и здоровый образ жизни</title>
 </head>
 <body>
-    <h3 align="right">Авторизация</h3>
+
+    <?php if ($login === null): ?>
+<a href="login.php">Авторизуйтесь</a>
+<?php else: ?>
+Добро пожаловать, <?= $login ?>
+<br>
+<a href="logout.php">Выйти</a>
+<?php
+    $exit_login = "exit";
+    $exit_pass = "exit";
+setcookie('login', $exit_login, 0, '/');
+setcookie('password', $exit_pass, 0, '/');
+ endif; ?>
+
     <h1 align = "center">Здоровый образ жизни</h1>
     <p><img src="assets/images/first.jpg"></p>
     <p>Здоровый образ жизни — образ жизни отдельного человека с целью профилактики болезней и укрепления здоровья.</p>
