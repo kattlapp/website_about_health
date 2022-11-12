@@ -12,17 +12,12 @@ $login = getUserLogin();
 <body>
 
     <?php if ($login === null): ?>
-<a href="login.php">Авторизуйтесь</a>
-<?php else: ?>
-Добро пожаловать, <?= $login ?>
-<br>
-<a href="logout.php">Выйти</a>
-<?php
-    $exit_login = "exit";
-    $exit_pass = "exit";
-setcookie('login', $exit_login, 0, '/');
-setcookie('password', $exit_pass, 0, '/');
- endif; ?>
+        <a href="login.php">Авторизуйтесь</a>
+    <?php else:
+    header('Location: users_index.php');
+    ?>
+
+    <?php endif; ?>
 
     <h1 align = "center">Здоровый образ жизни</h1>
     <p><img src="assets/images/first.jpg"></p>

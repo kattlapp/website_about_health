@@ -1,0 +1,100 @@
+body
+{
+    background: black;
+}
+h3
+{
+    color: #b2b2b2;
+}
+#wrapper {
+    max-width: 960px;
+    margin: auto;
+}
+header {
+    padding: 20px 0;
+}
+form[name="search"] {
+    float: right;
+}
+aside {
+    float: left;
+    width: 250px;
+}
+section {
+    margin-left: 280px;
+    padding-bottom: 50px;
+}
+/*Главное меню*/
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style-position: inside;
+    font: 14px 'Oswald', sans-serif;
+    padding: 10px;
+}
+
+.top-menu li {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.top-menu li.active {
+    background: #17515d;
+    color: #fff;
+}
+
+.top-menu a {
+    color: #b2b2b2;
+}
+
+/*Подменюшка*/
+
+.aside-menu li {
+    font-weight: 300;
+    list-style-type: square;
+    border-top: 1px solid #e7e7e7;
+}
+
+.aside-menu li:first-child {
+    border: none;
+}
+
+.aside-menu li.active {
+    color: #29c5e6;
+}
+
+.aside-menu a {
+    color: #8f8f8f;
+}
+/*лозунг*/
+blockquote {
+    margin: 0;
+    background: #17515d;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+blockquote p {
+    color: #b2b2b2;
+    font-style: italic;
+    font-size: 33px;
+    margin: 0;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 20px;
+    font-style: normal;
+    color: #a3efff;
+    margin: 0;
+    text-align: right;
+}
