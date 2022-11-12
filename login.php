@@ -17,6 +17,7 @@ if (!empty($_POST)) {
 <html>
 <head>
     <title>Форма авторизации</title>
+        <link rel="stylesheet" href="assets/css/style_login.css">
 </head>
 <body>
 
@@ -27,11 +28,18 @@ if (!empty($_POST)) {
 <?php endif; ?>
 
 <form action="login.php" method="post">
-    <label for="login">Имя пользователя: </label><input type="text" name="login" id="login">
+    <h2 align = center>Авторизация</h2>
+   <div class="field">
+    <label for="login">Логин: </label><input type="text" name="login" id="login">
+    </div>
     <br>
+    <div class="field">
     <label for="password">Пароль: </label><input type="password" name="password" id="password">
+    </div>
     <br>
+    <div class="field">
     <input type="submit" value="Войти">
+    </div>
 </form>
 </body>
 </html>
