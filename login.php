@@ -21,11 +21,7 @@ if (!empty($_POST)) {
 </head>
 <body>
 
-<?php if (isset($error)): ?>
-<span style="color: red;">
-    <?= $error ?>
-</span>
-<?php endif; ?>
+
 
 <form action="login.php" method="post">
     <h2 align = center>Авторизация</h2>
@@ -37,9 +33,15 @@ if (!empty($_POST)) {
     <label for="password">Пароль: </label><input type="password" name="password" id="password">
     </div>
     <br>
+    <?php if (isset($error)): ?>
+<span align = center style="color: red;">
+    <?= $error ?>
+</span>
+<?php endif; ?>
     <div class="field">
     <input type="submit" value="Войти">
     </div>
 </form>
 </body>
 </html>
+
